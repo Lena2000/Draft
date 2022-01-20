@@ -1,0 +1,59 @@
+****Вывод массива объектов****
+
+
+***Class Student***
+
+package hillel;
+
+public class Student {
+        int id;
+        String name1;
+        String name2;
+        String name3;
+        String date;
+        String address;
+        int phoneNumber;
+        String faculty;
+        int course;
+        String group;
+
+     Student (String name1, String name2, String name3, String date, String address, int phoneNumber, String faculty, int course, String group){
+    this.name1=name1;
+    this.name2=name2;
+    this.name3=name3;
+    this.date=date;
+    this.address=address;
+    this.phoneNumber=phoneNumber;
+    this.faculty=faculty;
+    this.course=course;
+    this.group=group;
+    }
+    }
+
+
+
+***Class Main***
+
+package hillel;
+
+import java.util.Scanner;
+
+public abstract class Main {
+
+        static class Stu {
+            static Student[] abc = new Student [3];
+
+            public static void main (String[] args){
+                abc[0] = new Student("Дроздов", "Михайлович", "Иван", "21-06-2000", "Пушкинская-2", 475232, "Компьютерная Инженерия", 2, "АИ-175");
+                abc[1] = new Student("Петров", "Николаевич", "Степан", "11-02-1999", "Еврейская-3", 52799, "Компьютерные науки", 4, "АС-171");
+                abc[2] = new Student("Носов", "Игоревич", "Владимир", "14-03-2002", "Канатная-65", 336789, "Компьютерная Инженерия", 1, "АИ-165");
+
+
+                for (int i = 0; i<3; i++){
+                    System.out.println(abc[i].name1 + " " + abc[i].name3);
+                }
+            }
+        }
+
+}
+
